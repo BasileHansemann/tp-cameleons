@@ -1,0 +1,133 @@
+body {
+    background-color: #2f3848;
+    padding: 5vw;
+      font-family: 'Open Sans', sans-serif;
+   
+  }
+  
+  .big__image {
+     width: 900px;
+       margin: 2rem 0 2rem;
+  }
+  
+  
+  .entete__titre {
+      color: white;
+      font-size: 2rem;
+      background-color: #F05768;
+      text-align: center;
+    padding: 0.2rem 0 0.8rem;
+      border-radius: 0 0 10px 10px;
+      border-bottom: 3px solid;
+    font-style: italic;
+    font-weight: 900;
+      margin-bottom: 1rem;
+  }
+  
+  .big__titre {
+      text-transform: uppercase;
+    width: fit-content;
+      font-weight: 900;
+      color: white;
+    font-size: 1.2rem;
+    background-color: #F05768;
+    text-align: center;
+    padding: 0.5rem;
+      position: absolute;
+  }
+  
+  .entete__navbar {
+    color:yellowgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+      width: 20%;
+      justify-content: space-between;
+      font-weight: bolder;
+  
+  }
+  
+  .entete__nope {
+      color: #0099C9;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 1.7rem;
+      font-style: italic;
+      margin: 1rem 0.2rem;
+       
+  }
+  
+  .entete__texte {
+    color: white;
+    line-height: 1.4rem;
+    font-weight: bold;
+  }
+  
+  em {
+    color: yellowgreen;
+    line-height: 1.4rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .entete__logo {
+      display: flex;
+      position: relative;
+      left: 422px;
+      bottom: 9px;
+      justify-content: space-between;
+      width: 54px;
+  }
+  
+  .entete__logo--logo {
+      width: 1.3rem;
+  }
+  
+  .partage {
+    background-color: #004488;
+    padding: 1.0rem;
+  
+  }
+  
+  .partage__titre {
+    color: #0099C9;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.7rem; 
+    display: block;
+    border-bottom: solid 2px #0099C9;
+    margin-bottom: 1.3rem ;
+    padding: 1.3rem ;
+    text-transform: uppercase;
+    
+  }
+  
+  .partage__photo {
+    color: #72BA4F;
+    line-height: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .partage__lien {
+    color: #72BA4F;
+    line-height: 1.4rem;
+    font-weight: bold;
+    
+  }
+  
+  .entete,
+  .copyright,
+  .big,
+  .tableau-images,
+  .partage {
+      max-width: 900px;
+  }
+  
+  .copyright {
+    color:#0099C9;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+  
+  
