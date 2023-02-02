@@ -1,76 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-
 <head>
     <meta charset="UTF-8">
+    <title>Caméléon</title>
 
-    <title>Cameleon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/reset.css" media="all">
+
+    <!-- emmet: link:css[href="../css/style.css"] -->
+    <link rel="stylesheet" href="../css/style.css" media="all">
 </head>
 
 <body>
 
-    <header class="entete">
-        <h1 class="entete__titre">J &#9825; les caméléons!</h1>
-        <ul class="entete__navbar">
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Blog</li>
-            <li><a href="#"></a>Contact</li>
-        </ul>
-        <ul class="entete__logo">
-            <li><img class="entete__logo entete__logo--logo" src="../images/twitter_icon.png" alt="Logo twitter"></li>
-            <li><img class="entete__logo entete__logo--logo" src="../images/facebook_icon.png" alt="Logo facebook"></li>
-        </ul>
-        <h2 class="entete__nope">Trop de caméléons? nope.</h2>
-        <p class="entete__texte">Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméléons, c'est mignon. Les caméléons, c'est pas con. Les caméléons, ça sent le bonbon. Il est est <em class="entete__etude">prouvé scientifiquement</em> que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayez !</p>
-    </header>
-    <main>
-        <section class="big">
-            <h2 class="big__titre">le caméléon de la semaine &#9825 </h2>
-            <img class="big__image" src="../images/cameleon-big.jpg" alt="Gros caméléon">
-           
-        </section>
-        <section class="tableau-images">
-            <img class="tableau-images__big"  src="../images/cameleon01.jpg" alt="Caméléon 1">
-            <img src="../images/cameleon02.jpg" alt="Caméléon 2">
-            <img src="../images/cameleon03.jpg" alt="caméléon 3">
-            <img src="../images/cameleon04.jpg" alt="caméléon 4">
-            <img src="../images/cameleon05.jpg" alt="caméléon 5">
-            <img src="../images/cameleon06.jpg" alt="caméléon 6">
-            <img src="../images/cameleon07.jpg" alt="caméléon 7">
-            <img src="../images/cameleon08.jpg" alt="caméléon 8">
-            <img src="../images/cameleon09.jpg" alt="caméléon 9">
-            <img src="../images/cameleon10.jpg" alt="caméléon 10">
-            <img src="../images/cameleon11.jpg" alt="caméléon 11">
-            <img src="../images/cameleon12.jpg" alt="caméléon 12">
-            <img src="../images/cameleon13.jpg" alt="caméléon 13">
-            <img src="../images/cameleon14.jpg" alt="caméléon 14">
-            <img src="../images/cameleon15.jpg" alt="caméléon 15">
-            <img src="../images/cameleon16.jpg" alt="caméléon 16">
-            <img src="../images/cameleon17.jpg" alt="caméléon 17">
-            <img src="../images/cameleon18.jpg" alt="caméléon 18">
-            <img src="../images/cameleon19.jpg" alt="caméléon 19">
-            <img src="../images/cameleon20.jpg" alt="caméléon 20">
-        </section>
-        <section class="partage">
-            <h2 class="partage__titre">soumettez vos photos de caméléons!</h2>
-            <p class="partage__photo">Vous avez trouvé une photo de caméléon tellement mignonne que vous voulez la partager?</p>
-            <a class="partage__lien" href="#">Partagez la içi!</a>
-            <h2 class="partage__titre">Inscrivez vous à notre newsletter!</h2>
-            <a class="partage__lien" href="#">souscrivez ici.</a>
-        </section>
-    </main>
-       
-    <footer class="copyright">
-        <p>Copyright &copy; 2017 I &#9825 caméléons </p>
-    </footer>
+    <div class="container">
+
+        <!-- la classe entete sert à la structuration et n'entre pas dans le cadre BEM -->
+        <header class="entete">
+
+            <h1 class="header-title">J <span class="header-title__heart">&#10084;</span> les caméléons !</h1>
+
+            <div class="menu-socials">
+                <!-- composant BEM menu-->
+                <nav class="menu">
+                    <!-- emmet: ul>li*3>a[href="#"] -->
+                    <ul>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Blog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- composant BEM socials -->
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a class="socials__link" href="#"><img class="socials__picture" src="../images/twitter_icon.png" alt="Icone Twitter"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#"><img class="socials__picture" src="../images/facebook_icon.png" alt="Icone Facebook"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- emmet: main>h2+p -->
+        <!-- la classe principal du <main> ne s'applique pas dans le cadre de notre nommenclature BEM.
+         La classe principal du <main> ne représente pas un bloc BEM, ce n'est pas un composant "principal" -->
+        <main class="principal">
+
+            <!-- bloc BEM qui représente l'entête de ma zone <main> -->
+            <section class="main-header">
+                <h2 class="main-header__title">Trop de caméléons? nope.</h2>
+                <p class="main-header__text"> Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméléons,
+                    c'est mignon. Les caméléons,
+                    c'est pas con. Les
+                    caméléons, ça sent le bonbon. il est <a class="link"
+                        href="https://fr.wikipedia.org/wiki/Les_Cam%C3%A9l%C3%A9ons">prouvé scientifiquement</a> que
+                    regarder les caméléons tous les jours améliore la productivité et diminue le stress.
+                    Essayez !</p>
+            </section>
+
+            <!-- bloc BEM qui représente le caméléon de la semaine -->
+            <section class="cam-of-the-week">
+                <h2 class="cam-of-the-week__title">Le caméléon de la semaine ♡</h2>
+                <img class="cam-of-the-week__picture" src="../images/cameleon-big.jpg" alt="Le caméléon de la semaine">
+            </section>
+
+            <!-- contient la galerie + zone d'envoi -->
+            <div class="gallery-submit">
+
+                <section class="gallery">
+                    <!-- emmet: img[src="../images/cameleon$$.jpg" alt="Caméléon n°$$"]*20 -->
+                    <img class="gallery__thumbnail" src="../images/cameleon01.jpg" alt="Caméléon n°01">
+                    <img class="gallery__thumbnail" src="../images/cameleon02.jpg" alt="Caméléon n°02">
+                    <img class="gallery__thumbnail" src="../images/cameleon03.jpg" alt="Caméléon n°03">
+                    <img class="gallery__thumbnail" src="../images/cameleon04.jpg" alt="Caméléon n°04">
+                    <img class="gallery__thumbnail" src="../images/cameleon05.jpg" alt="Caméléon n°05">
+                    <img class="gallery__thumbnail" src="../images/cameleon06.jpg" alt="Caméléon n°06">
+                    <img class="gallery__thumbnail" src="../images/cameleon07.jpg" alt="Caméléon n°07">
+                    <img class="gallery__thumbnail" src="../images/cameleon08.jpg" alt="Caméléon n°08">
+                    <img class="gallery__thumbnail" src="../images/cameleon09.jpg" alt="Caméléon n°09">
+                    <img class="gallery__thumbnail" src="../images/cameleon10.jpg" alt="Caméléon n°10">
+                    <img class="gallery__thumbnail" src="../images/cameleon11.jpg" alt="Caméléon n°11">
+                    <img class="gallery__thumbnail" src="../images/cameleon12.jpg" alt="Caméléon n°12">
+                    <img class="gallery__thumbnail" src="../images/cameleon13.jpg" alt="Caméléon n°13">
+                    <img class="gallery__thumbnail" src="../images/cameleon14.jpg" alt="Caméléon n°14">
+                    <img class="gallery__thumbnail" src="../images/cameleon15.jpg" alt="Caméléon n°15">
+                    <img class="gallery__thumbnail" src="../images/cameleon16.jpg" alt="Caméléon n°16">
+                    <img class="gallery__thumbnail" src="../images/cameleon17.jpg" alt="Caméléon n°17">
+                    <img class="gallery__thumbnail" src="../images/cameleon18.jpg" alt="Caméléon n°18">
+                    <img class="gallery__thumbnail" src="../images/cameleon19.jpg" alt="Caméléon n°19">
+                    <img class="gallery__thumbnail" src="../images/cameleon20.jpg" alt="Caméléon n°20">
+                </section>
+
+                <aside class="submit">
+                    <!-- emmet: h3+p+h3+p -->
+                    <h3 class="submit__title">Soumettez vos photos de caméléons!</h3>
+                    <p class="submit__text">Vous avez trouvé une photo de caméléon tellement mignonne que vous voulez la
+                        partager?
+                        <a class="link" href="#">Partagez là ici!</a></p>
+                    <h3 class="submit__title">Inscrivez vous à notre newsletter!</h3>
+                    <p class="submit__text">
+                        <a class="link" href="#">Souscrivez ici.</a>
+                    </p>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="copyright">
+            <p>Copyright &copy; 2017 I &hearts; Caméléons</p>
+        </footer>
+    </div>
 
 </body>
 

@@ -1,133 +1,228 @@
 body {
-    background-color: #2f3848;
-    padding: 5vw;
-      font-family: 'Open Sans', sans-serif;
-   
+  background-color: #2f3848;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.header-title {
+  color: #fff;
+  background-color: #f05768;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: italic;
+  padding: 1rem;
+  border-bottom: 3px solid #ADD8E6;
+  border-radius: 0 0 7px 7px;
+}
+
+/* je crée l'animation */
+@keyframes heartbeat {
+  from {
+      opacity: 0;
+      /* transparent */
+  }
+
+  to {
+      opacity: 1;
+      /* opaque */
+  }
+}
+
+.header-title__heart {
+  font-size: 3rem;
+
+  /* nom de l'animation définie plus haut */
+  animation-name: heartbeat;
+  /* durée de la transition */
+  animation-duration: 0.5s;
+  /* animation à faire en continue, sans arrêt */
+  animation-iteration-count: infinite;
+  /* aller-retour */
+  animation-direction: alternate;
+}
+
+.menu-socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item {
+  display: inline-block;
+  font-weight: bold;
+  padding: 15px 15px 15px 0;
+}
+.menu__link {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+.socials {
+  align-self: center;
+}
+.socials__item {
+  display: inline-block;
+}
+.socials__picture {
+  height: 24px;
+
+  transition: 1s;
+}
+.socials__picture:hover {
+  transform: rotate(360deg) scale(2);
+}
+
+.main-header__title {
+  font-size: 1.5rem;
+  color: #09C;
+  font-weight: bold;
+  font-style: italic;
+}
+.main-header__text {
+  color: white;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+
+.link {
+  color: yellowgreen;
+  text-decoration: underline;
+}
+
+.cam-of-the-week {
+  position: relative;
+}
+.cam-of-the-week__title {
+  background-color: #f05768;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  padding: 10px;
+  text-align: center;
+  /*display: block;*/
+  position: absolute;
+
+  z-index: 10;
+}
+.cam-of-the-week__picture {
+  max-width: 100%;
+
+  /* filter: grayscale(100%);
+  transition: 3s; */
+}
+
+/* .cam-of-the-week__picture:hover {
+  filter: grayscale(0);
+} */
+
+.gallery-submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.gallery {
+  width: 70%;
+}
+
+.gallery__thumbnail {
+  width: calc(25% - 8px);
+  margin: 0 8px 8px 0;
+  float: left;
+
+  /* transition: 2s; */
+}
+
+/* .gallery__thumbnail:hover {
+  transform: scale(1.4);
+} */
+
+/* les pseudo-classes :first-child, :last-child... :nth- permettent de cibler des enfants en fonction de leur ordre dans le HTML */
+.gallery__thumbnail:first-child {
+  width: calc(50% - 8px);
+}
+
+.submit {
+  background-color: #048;
+  padding: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 30%;
+  margin-left: 24px;
+}
+.submit__title {
+  border-bottom: 1px solid #60B9CE;
+  color: #60B9CE;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+.submit__text {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: .875rem;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+.copyright {
+  text-align: center;
+  color: #00ccff;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+img {
+  /* les images ne dépasseront jamais leur conteneur */
+  max-width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery__thumbnail {
+      width: calc(33% - 8px);
   }
   
-  .big__image {
-     width: 900px;
-       margin: 2rem 0 2rem;
+  /* les pseudo-classes :first-child, :last-child... :nth- permettent de cibler des enfants en fonction de leur ordre dans le HTML */
+  .gallery__thumbnail:first-child {
+      width: calc(33% - 8px);
   }
-  
-  
-  .entete__titre {
-      color: white;
-      font-size: 2rem;
-      background-color: #F05768;
-      text-align: center;
-    padding: 0.2rem 0 0.8rem;
-      border-radius: 0 0 10px 10px;
-      border-bottom: 3px solid;
-    font-style: italic;
-    font-weight: 900;
-      margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+  .gallery-submit {
+      flex-direction: column;
   }
-  
-  .big__titre {
-      text-transform: uppercase;
-    width: fit-content;
-      font-weight: 900;
-      color: white;
-    font-size: 1.2rem;
-    background-color: #F05768;
-    text-align: center;
-    padding: 0.5rem;
-      position: absolute;
+  .submit {
+      margin: 0;
+      width: auto;
   }
-  
-  .entete__navbar {
-    color:yellowgreen;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-      width: 20%;
-      justify-content: space-between;
-      font-weight: bolder;
-  
+  .gallery {
+      width: auto;
   }
-  
-  .entete__nope {
-      color: #0099C9;
-      text-transform: capitalize;
-      font-weight: bold;
-      font-size: 1.7rem;
-      font-style: italic;
-      margin: 1rem 0.2rem;
-       
+  .gallery__thumbnail:nth-child(3n) {
+      margin-right: 0;
   }
-  
-  .entete__texte {
-    color: white;
-    line-height: 1.4rem;
-    font-weight: bold;
+  .gallery__thumbnail {
+      width: calc(33% - 4px);
   }
-  
-  em {
-    color: yellowgreen;
-    line-height: 1.4rem;
-    font-weight: bold;
-    text-decoration: underline;
+  .gallery__thumbnail:first-child {
+      width: calc(33% - 4px);
   }
-  
-  .entete__logo {
-      display: flex;
-      position: relative;
-      left: 422px;
-      bottom: 9px;
-      justify-content: space-between;
-      width: 54px;
-  }
-  
-  .entete__logo--logo {
-      width: 1.3rem;
-  }
-  
-  .partage {
-    background-color: #004488;
-    padding: 1.0rem;
-  
-  }
-  
-  .partage__titre {
-    color: #0099C9;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 1.7rem; 
-    display: block;
-    border-bottom: solid 2px #0099C9;
-    margin-bottom: 1.3rem ;
-    padding: 1.3rem ;
-    text-transform: uppercase;
-    
-  }
-  
-  .partage__photo {
-    color: #72BA4F;
-    line-height: 1.1rem;
-    font-weight: bold;
-  }
-  
-  .partage__lien {
-    color: #72BA4F;
-    line-height: 1.4rem;
-    font-weight: bold;
-    
-  }
-  
-  .entete,
-  .copyright,
-  .big,
-  .tableau-images,
-  .partage {
-      max-width: 900px;
-  }
-  
-  .copyright {
-    color:#0099C9;
-    text-align: center;
-    padding: 1rem;
-    
-  }
-  
-  
+}
